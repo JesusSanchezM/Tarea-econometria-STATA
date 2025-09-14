@@ -34,8 +34,8 @@ Aquí subiré tanto el **código en Stata (.do/.dta)** como los **informes en PD
 ## 📘 Ejercicios Desarrollados  
 
 ### ==EJERCICIO-37==  
-📄 [Ver PDF](tareas/tarea-2.pdf)  
-💻 [Ver Código Stata](codigo/tarea-2.do)  
+📄 [Ver PDF](tareas/Tarea-2.pdf)  
+💻 [Ver Código Stata](codigo/Tarea-2.do)  
 
 **Tema:** Estimación de regresión simple, interpretación de intercepto, pendiente, prueba de hipótesis y construcción de intervalos de confianza.  
 
