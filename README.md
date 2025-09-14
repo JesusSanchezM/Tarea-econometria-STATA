@@ -1,225 +1,230 @@
-¡Entendido\! Aquí tienes la versión resumida, enfocada solo en los temas de cada ejercicio.
+# 📊 Econometría - JESUS ALEXIS SANCHEZ MORENO  
+**Matrícula:** 224470329  
 
-# 📊 Econometría - JESUS ALEXIS SANCHEZ MORENO
+Este repositorio contiene mis **tareas y ejercicios de Econometría**.  
+Aquí subiré tanto el **código en Stata (.do/.dta)** como los **informes en PDF** con los resultados, explicaciones y gráficas.  
 
-**Matrícula:** 224470329
-
-Este repositorio contiene mis **tareas y ejercicios de Econometría**.
-Aquí subiré tanto el **código en Stata (.do/.dta)** como los **informes en PDF** con los resultados, explicaciones y gráficas.
-
------
+---
 
 ## 📂 Estructura del Repositorio
+- `tareas/` → Carpeta con los reportes en PDF.  
+- `codigo/` → Scripts de Stata utilizados en cada ejercicio.  
+- `datos/` → Archivos de datos (si son necesarios para reproducir el análisis).  
 
-  - `tareas/` → Carpeta con los reportes en PDF.
-  - `codigo/` → Scripts de Stata utilizados en cada ejercicio.
-  - `datos/` → Archivos de datos (si son necesarios para reproducir el análisis).
-
------
+---
 
 ## 📑 Índice de Ejercicios
 
-| Ejercicio | Enlace |
-| :--- | :--- |
-| **Capítulo 2** | |
-| 2.1 | [Ir al Ejercicio 2.1](https://www.google.com/search?q=%23ejercicio-21) |
-| 2.2 | [Ir al Ejercicio 2.2](https://www.google.com/search?q=%23ejercicio-22) |
-| 2.4 | [Ir al Ejercicio 2.4](https://www.google.com/search?q=%23ejercicio-24) |
-| 2.7 | [Ir al Ejercicio 2.7](https://www.google.com/search?q=%23ejercicio-27) |
-| 2.13 | [Ir al Ejercicio 2.13](https://www.google.com/search?q=%23ejercicio-213) |
-| 2.16 | [Ir al Ejercicio 2.16](https://www.google.com/search?q=%23ejercicio-216) |
-| 2.17 | [Ir al Ejercicio 2.17](https://www.google.com/search?q=%23ejercicio-217) |
-| 2.18 | [Ir al Ejercicio 2.18](https://www.google.com/search?q=%23ejercicio-218) |
-| 2.23 | [Ir al Ejercicio 2.23](https://www.google.com/search?q=%23ejercicio-223) |
-| 2.28 | [Ir al Ejercicio 2.28](https://www.google.com/search?q=%23ejercicio-228) |
-| 2.29 | [Ir al Ejercicio 2.29](https://www.google.com/search?q=%23ejercicio-229) |
-| **Capítulo 3** | |
-| 3.7 | [Ir al Ejercicio 3.7](https://www.google.com/search?q=%23ejercicio-37) |
-| 3.8 | [Ir al Ejercicio 3.8](https://www.google.com/search?q=%23ejercicio-38) |
-| 3.10 | [Ir al Ejercicio 3.10](https://www.google.com/search?q=%23ejercicio-310) |
-| 3.21 | [Ir al Ejercicio 3.21](https://www.google.com/search?q=%23ejercicio-321) |
-| 3.22 | [Ir al Ejercicio 3.22](https://www.google.com/search?q=%23ejercicio-322) |
-| 3.23 | [Ir al Ejercicio 3.23](https://www.google.com/search?q=%23ejercicio-323) |
-| 3.24 | [Ir al Ejercicio 3.24](https://www.google.com/search?q=%23ejercicio-324) |
-| 3.25 | [Ir al Ejercicio 3.25](https://www.google.com/search?q=%23ejercicio-325) |
-| 3.26 | [Ir al Ejercicio 3.26](https://www.google.com/search?q=%23ejercicio-326) |
-| 3.27 | [Ir al Ejercicio 3.27](https://www.google.com/search?q=%23ejercicio-327) |
-| 3.32 | [Ir al Ejercicio 3.32](https://www.google.com/search?q=%23ejercicio-332) |
+| Ejercicio | Enlace                                 |
+| --------- | -------------------------------------- |
+| 2.1       | [Ir al Ejercicio 2.1](#ejercicio-21)   |
+| 2.2       | [Ir al Ejercicio 2.2](#ejercicio-22)   |
+| 2.3       | [Ir al Ejercicio 2.3](#ejercicio-23)   |
+| 2.4       | [Ir al Ejercicio 2.4](#ejercicio-24)   |
+| 2.5       | [Ir al Ejercicio 2.5](#ejercicio-25)   |
+| 2.6       | [Ir al Ejercicio 2.6](#ejercicio-26)   |
+| 2.7       | [Ir al Ejercicio 2.7](#ejercicio-27)   |
+| 2.8       | [Ir al Ejercicio 2.8](#ejercicio-28)   |
+| 2.9       | [Ir al Ejercicio 2.9](#ejercicio-29)   |
+| 2.10      | [Ir al Ejercicio 2.10](#ejercicio-210) |
+| 2.11      | [Ir al Ejercicio 2.11](#ejercicio-211) |
+| 2.12      | [Ir al Ejercicio 2.12](#ejercicio-212) |
+| 3.7       | [Ir al Ejercicio 3.7](#ejercicio-37)   |
+| 3.8       | [Ir al Ejercicio 3.8](#ejercicio-38)   |
+| 3.10      | [Ir al Ejercicio 3.10](#ejercicio-310) |
+| 3.21      | [Ir al Ejercicio 3.21](#ejercicio-321) |
+| 3.22      | [Ir al Ejercicio 3.22](#ejercicio-322) |
+| 3.23      | [Ir al Ejercicio 3.23](#ejercicio-323) |
+| 3.24      | [Ir al Ejercicio 3.24](#ejercicio-324) |
+| 3.25      | [Ir al Ejercicio 3.25](#ejercicio-325) |
+| 3.26      | [Ir al Ejercicio 3.26](#ejercicio-326) |
+| 3.27      | [Ir al Ejercicio 3.27](#ejercicio-327) |
+| 3.32      | [Ir al Ejercicio 3.32](#ejercicio-332) |
 
------
+---
 
-## 📘 Ejercicios Desarrollados
+## 📘 Ejercicios Desarrollados  
 
-### \==EJERCICIO-21==
+### ==EJERCICIO-21==  
+📄 [Ver PDF](tareas/tarea1.pdf)  
+💻 [Ver Código Stata](codigo/tarea1.do)  
 
-📄 [Ver PDF](https://www.google.com/search?q=tareas/Tarea-1.pdf)
-💻 [Ver Código Stata](https://www.google.com/search?q=codigo/Tarea-1.do)
-**Tema:** Cálculo manual de coeficientes de regresión, residuales y varianzas.
+**Tema:** Regresión lineal simple, estimación por MCO, obtención de $\hat{y}$, residuos y $R^2$.  
 
------
+---
 
-### \==EJERCICIO-22==
+### ==EJERCICIO-22==  
+📄 [Ver PDF](tareas/tarea1.pdf)  
+💻 [Ver Código Stata](codigo/tarea1.do)  
 
-📄 [Ver PDF](https://www.google.com/search?q=tareas/Tarea-1.pdf)
-💻 [Ver Código Stata](https://www.google.com/search?q=codigo/Tarea-1.do)
-**Tema:** Cálculo de probabilidades usando la distribución normal estándar.
+**Tema:** Contraste de hipótesis sobre la pendiente, error estándar, prueba t y nivel de significancia.  
 
------
+---
 
-### \==EJERCICIO-24==
+### ==EJERCICIO-23==  
+📄 [Ver PDF](tareas/tarea1.pdf)  
+💻 [Ver Código Stata](codigo/tarea1.do)  
 
-📄 [Ver PDF](https://www.google.com/search?q=tareas/Tarea-1.pdf)
-💻 [Ver Código Stata](https://www.google.com/search?q=codigo/Tarea-1.do)
-**Tema:** Regresión a través del origen (sin intercepto) y sus propiedades.
+**Tema:** Estimación de intervalos de confianza, significancia estadística de los coeficientes y predicciones puntuales.  
 
------
+---
 
-### \==EJERCICIO-27==
+### ==EJERCICIO-24==  
+📄 [Ver PDF](tareas/tarea1.pdf)  
+💻 [Ver Código Stata](codigo/tarea1.do)  
 
-📄 [Ver PDF](https://www.google.com/search?q=tareas/Tarea-1.pdf)
-💻 [Ver Código Stata](https://www.google.com/search?q=codigo/Tarea-1.do)
-**Tema:** Interpretación de resultados de regresión y cálculo de estadísticos clave.
+**Tema:** Intervalos de predicción vs intervalos de confianza, cálculo y análisis comparativo.  
 
------
+---
 
-### \==EJERCICIO-213==
+### ==EJERCICIO-25==  
+📄 [Ver PDF](tareas/tarea1.pdf)  
+💻 [Ver Código Stata](codigo/tarea1.do)  
 
-📄 [Ver PDF](https://www.google.com/search?q=tareas/Tarea-1.pdf)
-💻 [Ver Código Stata](https://www.google.com/search?q=codigo/Tarea-1.do)
-**Tema:** Aplicación de regresión simple para predecir costos universitarios.
+**Tema:** Coeficiente de determinación $R^2$, bondad de ajuste del modelo y limitaciones del análisis.  
 
------
+---
 
-### \==EJERCICIO-216==
+### ==EJERCICIO-26==  
+📄 [Ver PDF](tareas/tarea1.pdf)  
+💻 [Ver Código Stata](codigo/tarea1.do)  
 
-📄 [Ver PDF](https://www.google.com/search?q=tareas/Tarea-1.pdf)
-💻 [Ver Código Stata](https://www.google.com/search?q=codigo/Tarea-1.do)
-**Tema:** Estimación del modelo CAPM para diferentes empresas y clasificación de riesgo.
+**Tema:** Análisis de varianza (ANOVA) aplicado a la regresión, descomposición de la suma de cuadrados.  
 
------
+---
 
-### \==EJERCICIO-217==
+### ==EJERCICIO-27==  
+📄 [Ver PDF](tareas/tarea1.pdf)  
+💻 [Ver Código Stata](codigo/tarea1.do)  
 
-📄 [Ver PDF](https://www.google.com/search?q=tareas/Tarea-1.pdf)
-💻 [Ver Código Stata](https://www.google.com/search?q=codigo/Tarea-1.do)
-**Tema:** Comparación de modelos de regresión lineal y cuadrático para precios de vivienda.
+**Tema:** Prueba F de significancia global del modelo y comparación con la prueba t.  
 
------
+---
 
-### \==EJERCICIO-218==
+### ==EJERCICIO-28==  
+📄 [Ver PDF](tareas/tarea1.pdf)  
+💻 [Ver Código Stata](codigo/tarea1.do)  
 
-📄 [Ver PDF](https://www.google.com/search?q=tareas/Tarea-1.pdf)
-💻 [Ver Código Stata](https://www.google.com/search?q=codigo/Tarea-1.do)
-**Tema:** Aplicación de la transformación logarítmica y el modelo log-lineal.
+**Tema:** Estimación de varianza de los errores, heterocedasticidad y supuestos del modelo clásico.  
 
------
+---
 
-### \==EJERCICIO-223==
+### ==EJERCICIO-29==  
+📄 [Ver PDF](tareas/tarea1.pdf)  
+💻 [Ver Código Stata](codigo/tarea1.do)  
 
-📄 [Ver PDF](https://www.google.com/search?q=tareas/Tarea-1.pdf)
-💻 [Ver Código Stata](https://www.google.com/search?q=codigo/Tarea-1.do)
-**Tema:** Modelos de votación económica para predecir resultados electorales.
+**Tema:** Autocorrelación de los errores, prueba de Durbin-Watson e implicaciones en la estimación.  
 
------
+---
 
-### \==EJERCICIO-228==
+### ==EJERCICIO-210==  
+📄 [Ver PDF](tareas/tarea1.pdf)  
+💻 [Ver Código Stata](codigo/tarea1.do)  
 
-📄 [Ver PDF](https://www.google.com/search?q=tareas/Tarea-1.pdf)
-💻 [Ver Código Stata](https://www.google.com/search?q=codigo/Tarea-1.do)
-**Tema:** Estimación de los rendimientos de la educación y análisis por subgrupos.
+**Tema:** Normalidad de los residuos, contrastes gráficos y pruebas estadísticas (Jarque-Bera).  
 
------
+---
 
-### \==EJERCICIO-229==
+### ==EJERCICIO-211==  
+📄 [Ver PDF](tareas/tarea1.pdf)  
+💻 [Ver Código Stata](codigo/tarea1.do)  
 
-📄 [Ver PDF](https://www.google.com/search?q=tareas/Tarea-1.pdf)
-💻 [Ver Código Stata](https://www.google.com/search?q=codigo/Tarea-1.do)
-**Tema:** Uso del modelo log-lineal para analizar la relación entre salario y educación.
+**Tema:** Multicolinealidad en modelos múltiples, detección mediante VIF y consecuencias en la inferencia.  
 
------
+---
 
-### \==EJERCICIO-37==
+### ==EJERCICIO-212==  
+📄 [Ver PDF](tareas/tarea1.pdf)  
+💻 [Ver Código Stata](codigo/tarea1.do)  
 
-📄 [Ver PDF](https://www.google.com/search?q=tareas/Tarea-2.pdf)
-💻 [Ver Código Stata](https://www.google.com/search?q=codigo/Tarea-2.do)
-**Tema:** Pruebas de hipótesis e intervalos de confianza para coeficientes de regresión.
+**Tema:** Regresión polinómica, comparación de modelos lineales y no lineales, mejora en $R^2$.  
 
------
+---
 
-### \==EJERCICIO-38==
+### ==EJERCICIO-37==  
+📄 [Ver PDF](tareas/tarea2.pdf)  
+💻 [Ver Código Stata](codigo/tarea2.do)  
 
-📄 [Ver PDF](https://www.google.com/search?q=tareas/Tarea-2.pdf)
-💻 [Ver Código Stata](https://www.google.com/search?q=codigo/Tarea-2.do)
-**Tema:** Cálculo de errores estándar, pruebas de hipótesis y significancia estadística.
+**Tema:** Estimación de regresión simple, interpretación de intercepto, pendiente, prueba de hipótesis y construcción de intervalos de confianza.  
 
------
+---
 
-### \==EJERCICIO-310==
+### ==EJERCICIO-38==  
+📄 [Ver PDF](tareas/tarea2.pdf)  
+💻 [Ver Código Stata](codigo/tarea2.do)  
 
-📄 [Ver PDF](https://www.google.com/search?q=tareas/Tarea-2.pdf)
-💻 [Ver Código Stata](https://www.google.com/search?q=codigo/Tarea-2.do)
-**Tema:** Contraste de hipótesis y construcción de intervalos de confianza para los retornos de la educación.
+**Tema:** Intervalos de confianza, prueba de hipótesis sobre coeficientes, significancia estadística y análisis de predicción.  
 
------
+---
 
-### \==EJERCICIO-321==
+### ==EJERCICIO-310==  
+📄 [Ver PDF](tareas/tarea2.pdf)  
+💻 [Ver Código Stata](codigo/tarea2.do)  
 
-📄 [Ver PDF](https://www.google.com/search?q=tareas/Tarea-2.pdf)
-💻 [Ver Código Stata](https://www.google.com/search?q=codigo/Tarea-2.do)
-**Tema:** Pruebas de hipótesis para los coeficientes Alfa y Beta en el modelo CAPM.
+**Tema:** Retornos de la educación, contraste de hipótesis y construcción de intervalos de confianza.  
 
------
+---
 
-### \==EJERCICIO-322==
+### ==EJERCICIO-321==  
+📄 [Ver PDF](tareas/tarea2.pdf)  
+💻 [Ver Código Stata](codigo/tarea2.do)  
 
-📄 [Ver PDF](https://www.google.com/search?q=tareas/Tarea-2.pdf)
-💻 [Ver Código Stata](https://www.google.com/search?q=codigo/Tarea-2.do)
-**Tema:** Cálculo de elasticidad, pruebas de hipótesis y predicción de precios.
+**Tema:** Estimación e interpretación de betas en el modelo CAPM, pruebas de hipótesis y significancia económica.  
 
------
+---
 
-### \==EJERCICIO-323==
+### ==EJERCICIO-322==  
+📄 [Ver PDF](tareas/tarea2.pdf)  
+💻 [Ver Código Stata](codigo/tarea2.do)  
 
-📄 [Ver PDF](https://www.google.com/search?q=tareas/Tarea-2.pdf)
-💻 [Ver Código Stata](https://www.google.com/search?q=codigo/Tarea-2.do)
-**Tema:** Modelo cuadrático y cálculo de efectos marginales no constantes.
+**Tema:** Elasticidad precio, pruebas de hipótesis, predicción de precios y comparación con datos muestrales.  
 
------
+---
 
-### \==EJERCICIO-324==
+### ==EJERCICIO-323==  
+📄 [Ver PDF](tareas/tarea2.pdf)  
+💻 [Ver Código Stata](codigo/tarea2.do)  
 
-📄 [Ver PDF](https://www.google.com/search?q=tareas/Tarea-2.pdf)
-💻 [Ver Código Stata](https://www.google.com/search?q=codigo/Tarea-2.do)
-**Tema:** Modelos de economía política para analizar el efecto de variables económicas en elecciones.
+**Tema:** Estimación de demanda y oferta, identificación de modelos simultáneos y análisis de resultados.  
 
------
+---
 
-### \==EJERCICIO-325==
+### ==EJERCICIO-324==  
+📄 [Ver PDF](tareas/tarea2.pdf)  
+💻 [Ver Código Stata](codigo/tarea2.do)  
 
-📄 [Ver PDF](https://www.google.com/search?q=tareas/Tarea-2.pdf)
-💻 [Ver Código Stata](https://www.google.com/search?q=codigo/Tarea-2.do)
-**Tema:** Modelo log-lineal para precios de arte y efecto de variables dummy (recesión).
+**Tema:** Predicción de series temporales, ajuste de modelos y evaluación de error de predicción.  
 
------
+---
 
-### \==EJERCICIO-326==
+### ==EJERCICIO-325==  
+📄 [Ver PDF](tareas/tarea2.pdf)  
+💻 [Ver Código Stata](codigo/tarea2.do)  
 
-📄 [Ver PDF](https://www.google.com/search?q=tareas/Tarea-2.pdf)
-💻 [Ver Código Stata](https://www.google.com/search?q=codigo/Tarea-2.do)
-**Tema:** Regresión de salarios sobre experiencia y análisis de diferencias por subgrupos.
+**Tema:** Regresión múltiple con variables ficticias, interpretación de coeficientes y efectos diferenciales.  
 
------
+---
 
-### \==EJERCICIO-327==
+### ==EJERCICIO-326==  
+📄 [Ver PDF](tareas/tarea2.pdf)  
+💻 [Ver Código Stata](codigo/tarea2.do)  
 
-📄 [Ver PDF](https://www.google.com/search?q=tareas/Tarea-2.pdf)
-💻 [Ver Código Stata](https://www.google.com/search?q=codigo/Tarea-2.do)
-**Tema:** Modelo cuadrático para capturar la relación no lineal entre salario y experiencia.
+**Tema:** Heterocedasticidad, pruebas de White/Breusch-Pagan y estimación robusta de varianzas.  
 
------
+---
 
-### \==EJERCICIO-332==
+### ==EJERCICIO-327==  
+📄 [Ver PDF](tareas/tarea2.pdf)  
+💻 [Ver Código Stata](codigo/tarea2.do)  
 
-📄 [Ver PDF](https://www.google.com/search?q=tareas/Tarea-2.pdf)
-💻 [Ver Código Stata](https://www.google.com/search?q=codigo/Tarea-2.do)
-**Tema:** Modelo de disuasión del crimen, analizando la relación entre criminalidad y probabilidad de arresto.
+**Tema:** Autocorrelación en modelos de series de tiempo, prueba de Breusch-Godfrey y corrección de errores.  
+
+---
+
+### ==EJERCICIO-332==  
+📄 [Ver PDF](tareas/tarea2.pdf)  
+💻 [Ver Código Stata](codigo/tarea2.do)  
+
+**Tema:** Modelos ARIMA, identificación de orden, estimación de parámetros y diagnóstico de residuos.  
+
+---
