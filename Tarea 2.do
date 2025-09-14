@@ -4,55 +4,33 @@
 *-------------------------------------
 *-------------------------------------
 
-*aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-* Calcular exceso de retorno
-gen excess_ge = ge - riskfree
-gen excess_ford = ford - riskfree
-gen excess_msft = msft - riskfree
-gen excess_xom = xom - riskfree
-gen excess_mkt = mkt - riskfree
+/* Generar las variables de rendimiento excedente */
+generate ex_xom = xom - riskfree
+generate ex_msft = msft - riskfree
+generate ex_ford = ford - riskfree
+generate ex_ge = ge - riskfree
+generate ex_mkt = mkt - riskfree
 
-* Regresión CAPM para cada acción
-reg excess_ge excess_mkt, robust
-reg excess_ford excess_mkt, robust
-reg excess_msft excess_mkt, robust
-reg excess_xom excess_mkt, robust
+/* --- regresiones y pruebas para cada empresa --- */
 
-* Para obtener intervalo del 95% de beta:
-reg excess_xom excess_mkt, robust
-* Luego mirar el coeficiente de excess_mkt y su 95% CI
+/* --- para exxon-mobil (incisos a, b, c, e) --- */
+regress ex_xom ex_mkt
 
+test ex_mkt = 1
 
-*bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-reg excess_ford excess_mkt, robust
-test excess_mkt = 1
+/* --- para microsoft (incisos a, d) --- */
+regress ex_msft ex_mkt
 
-reg excess_ge excess_mkt, robust
-test excess_mkt = 1
+/* --- para ford (incisos b, e) --- */
+/* --- pásame el resultado de este comando --- */
+regress ex_ford ex_mkt
 
-reg excess_xom excess_mkt, robust
-test excess_mkt = 1
+test ex_mkt = 1
 
+/* --- para general electric (incisos b, e) --- */
+regress ex_ge ex_mkt
 
-*ccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-reg excess_xom excess_mkt, robust
-test excess_mkt = 1
-
-
-*dddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-reg excess_msft excess_mkt, robust
-test excess_mkt = 1
-
-
-*eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-reg excess_ford excess_mkt, robust
-test _cons = 0
-
-reg excess_ge excess_mkt, robust
-test _cons = 0
-
-reg excess_xom excess_mkt, robust
-test _cons = 0
+test ex_mkt = 1
 
 
 *-------------------------------------
@@ -62,19 +40,19 @@ test _cons = 0
 *-------------------------------------
 
 
-/* 2. Obtener las medias de las variables (necesarias para el inciso a) */
+/* 1. Obtener las medias de las variables (necesarias para el inciso a) */
 summarize price sqft
 
-/* 3. Correr la regresión principal (necesaria para casi todos los incisos) */
+/* 2. Correr la regresión principal (necesaria para casi todos los incisos) */
 regress price sqft
 
-/* 4. Calcular la elasticidad y su IC (para los incisos a y b) */
+/* 3. Calcular la elasticidad y su IC (para los incisos a y b) */
 margins, eyex(sqft) atmeans
 
-/* 5. Estimar el precio esperado y su IC para una casa de 2000 sqft (para el inciso d) */
+/* 4. Estimar el precio esperado y su IC para una casa de 2000 sqft (para el inciso d) */
 margins, at(sqft = 20)
 
-/* 6. Calcular el precio promedio de las casas de 2000 sqft en la muestra (para el inciso e) */
+/* 5. Calcular el precio promedio de las casas de 2000 sqft en la muestra (para el inciso e) */
 summarize price if sqft == 20
 
 
