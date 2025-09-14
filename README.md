@@ -35,7 +35,7 @@ Aquí subiré tanto el **código en Stata (.do/.dta)** como los **informes en PD
 
 ### ==EJERCICIO-37==  
 📄 [Ver PDF](tareas/tarea2.pdf)  
-💻 [Ver Código Stata](codigo/ej37.do)  
+💻 [Ver Código Stata](codigo/tarea2.do)  
 
 **Tema:** Estimación de regresión simple, interpretación de intercepto, pendiente, prueba de hipótesis y construcción de intervalos de confianza.  
 
@@ -43,7 +43,7 @@ Aquí subiré tanto el **código en Stata (.do/.dta)** como los **informes en PD
 
 ### ==EJERCICIO-38==  
 📄 [Ver PDF](tareas/tarea2.pdf)  
-💻 [Ver Código Stata](codigo/ej38.do)  
+💻 [Ver Código Stata](codigo/tarea2.do)  
 
 **Tema:** Intervalos de confianza, prueba de hipótesis sobre coeficientes, significancia estadística y análisis de predicción.  
 
@@ -51,7 +51,7 @@ Aquí subiré tanto el **código en Stata (.do/.dta)** como los **informes en PD
 
 ### ==EJERCICIO-310==  
 📄 [Ver PDF](tareas/tarea2.pdf)  
-💻 [Ver Código Stata](codigo/ej310.do)  
+💻 [Ver Código Stata](codigo/tarea2.do)  
 
 **Tema:** Retornos de la educación, contraste de hipótesis y construcción de intervalos de confianza.  
 
@@ -59,7 +59,7 @@ Aquí subiré tanto el **código en Stata (.do/.dta)** como los **informes en PD
 
 ### ==EJERCICIO-321==  
 📄 [Ver PDF](tareas/tarea2.pdf)  
-💻 [Ver Código Stata](codigo/ej321.do)  
+💻 [Ver Código Stata](codigo/tarea2.do)  
 
 **Tema:** Estimación e interpretación de betas en el modelo CAPM, pruebas de hipótesis y significancia económica.  
 
@@ -67,7 +67,7 @@ Aquí subiré tanto el **código en Stata (.do/.dta)** como los **informes en PD
 
 ### ==EJERCICIO-322==  
 📄 [Ver PDF](tareas/tarea2.pdf)  
-💻 [Ver Código Stata](codigo/ej322.do)  
+💻 [Ver Código Stata](codigo/tarea2.do)  
 
 **Tema:** Elasticidad precio, pruebas de hipótesis, predicción de precios y comparación con datos muestrales.  
 
@@ -76,7 +76,3 @@ Aquí subiré tanto el **código en Stata (.do/.dta)** como los **informes en PD
 
 ---
 
-## 🚀 Cómo Ejecutar el Código
-1. Clona este repositorio:
-   ```bash
-   git clone https://github.com/tuusuario/econometria.git
