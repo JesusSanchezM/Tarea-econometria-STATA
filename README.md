@@ -8,7 +8,8 @@ Aquí subiré tanto el **código en Stata (.do/.dta)** como los **informes en PD
 
 ## 📂 Estructura del Repositorio
 - `tareas/` → Carpeta con los reportes en PDF.  
-- `codigo/` → Scripts de Stata utilizados en cada ejercicio.  
+- `codigo/` → Scripts de Stata utilizados en cada ejercicio.
+- `contenido/` → Archivo con el contenido de la materia para realizar las tareas 
 - `datos/` → Archivos de datos (si son necesarios para reproducir el análisis).  
 
 ---
