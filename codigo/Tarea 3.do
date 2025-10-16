@@ -2,91 +2,86 @@
 * Tarea 5.13: Modelo de precios de vivienda en Baton Rouge
 *-------------------------------------------------------------------------------
 
-* Primero, asegúrate de que Stata esté apuntando a la carpeta donde tienes
-* el archivo "br2.dat". Puedes usar el menú (File > Change working directory)
-* o el comando `cd "C:\Tu\Ruta\De\Carpeta"`.
-
-* Cargar los datos. Asumimos que es un archivo de texto delimitado por tabulaciones o espacios.
-insheet using br2.dat, clear names
 
 *-------------------------------------------------------------------------------
 * INCISO (a): Modelo Lineal Simple
 *-------------------------------------------------------------------------------
 * (i) Estimar el modelo y obtener los coeficientes
-regress PRICE SQFT AGE
+regress price sqft age
 
-* (ii) El intervalo de confianza del 95% para el coeficiente de SQFT
+* (ii) El intervalo de confianza del 95% para el coeficiente de sqft
 * se muestra automáticamente en la tabla de resultados del comando anterior.
 
-* (iii) Probar la hipótesis H0: B_AGE >= -1000 vs H1: B_AGE < -1000
+* (iii) Probar la hipótesis H0: B_age >= -1000 vs H1: B_age < -1000
 * Stata realiza pruebas de dos colas. Haremos una prueba de una cola manualmente.
 * Paso 1: Obtenemos el estadístico t.
-* t = (b_AGE - (-1000)) / se(b_AGE)
-display "Estadístico t para H0: B_AGE = -1000 es:"
-display (_b[AGE] - (-1000)) / _se[AGE]
+* t = (b_age - (-1000)) / se(b_age)
+display "Estadístico t para H0: B_age = -1000 es:"
+display (_b[age] - (-1000)) / _se[age]
 * Deberás comparar este valor t con el valor crítico t de una cola.
 
 *-------------------------------------------------------------------------------
 * INCISO (b): Modelo Cuadrático
 *-------------------------------------------------------------------------------
 * Generar las variables al cuadrado
-generate SQFT2 = SQFT^2
-generate AGE2 = AGE^2
+generate sqft2 = sqft^2
+generate age2 = age^2
 
 * Estimar el nuevo modelo con los términos cuadráticos
-regress PRICE SQFT AGE SQFT2 AGE2
+regress price sqft age sqft2 age2
 
 * (i) y (ii) Encontrar estimaciones de los efectos marginales
-* Primero, necesitamos los valores mínimo y máximo de SQFT y AGE
-summarize SQFT
+* Primero, necesitamos los valores mínimo y máximo de sqft y age
+summarize sqft
 local min_sqft = r(min)
 local max_sqft = r(max)
 
-summarize AGE
+summarize age
 local min_age = r(min)
 local max_age = r(max)
 
-* Efecto marginal de SQFT en la casa más pequeña, más grande y una de 2300 pies^2
-margins, dydx(SQFT) at(SQFT=(`min_sqft' `max_sqft' 2300))
+* Efecto marginal de sqft en la casa más pequeña, más grande y una de 2300 pies^2
+margins, dydx(sqft) at(sqft=(`min_sqft' `max_sqft' 2300))
 
-* Efecto marginal de AGE en la casa más nueva, más vieja y una de 20 años
-margins, dydx(AGE) at(AGE=(`min_age' `max_age' 20))
+* Efecto marginal de age en la casa más nueva, más vieja y una de 20 años
+margins, dydx(age) at(age=(`min_age' `max_age' 20))
 
 * (iii) Encontrar el intervalo de confianza del 95% para el efecto marginal
-* de SQFT para una casa de 2300 pies^2.
+* de sqft para una casa de 2300 pies^2.
 * El comando `margins` anterior ya te da este intervalo.
+lincom (_b[sqft] + 2 * _b[sqft2] * 2300)
 
-* (iv) Probar la hipótesis para el efecto marginal de AGE para una casa de 20 años.
-* H0: dPRICE/dAGE >= -1000 vs H1: dPRICE/dAGE < -1000
-* El efecto marginal es: B_AGE + 2 * B_AGE2 * 20 = B_AGE + 40 * B_AGE2
+* (iv) Probar la hipótesis para el efecto marginal de age para una casa de 20 años.
+* H0: dprice/dage >= -1000 vs H1: dprice/dage < -1000
+* El efecto marginal es: B_age + 2 * B_age2 * 20 = B_age + 40 * B_age2
 * Usamos `testnl` para probar esta combinación no lineal.
-testnl (_b[AGE] + 40 * _b[AGE2]) = -1000
+testnl (_b[age] + 40 * _b[age2]) = -1000
 * De nuevo, interpreta el resultado para una prueba de una cola.
 
 *-------------------------------------------------------------------------------
 * INCISO (c): Modelo con Interacción
 *-------------------------------------------------------------------------------
 * Crear la variable de interacción
-generate SQFT_AGE = SQFT * AGE
+generate sqft_age = sqft * age
 
 * Estimar el modelo completo: cuadrático + interacción
-regress PRICE SQFT AGE SQFT2 AGE2 SQFT_AGE
+regress price sqft age sqft2 age2 sqft_age
 
-* Repetir (i), (ii), (iii) y (iv) usando SQFT = 2300 y AGE = 20.
+* Repetir (i), (ii), (iii) y (iv) usando sqft = 2300 y age = 20.
 * Los efectos marginales ahora dependen de la otra variable.
 
-* (i) y (iii) Efecto marginal de SQFT y su IC del 95%
-* (cuando SQFT=2300 y AGE=20)
-margins, dydx(SQFT) at(SQFT=2300 AGE=20)
+* (i) y (iii) Efecto marginal de sqft y su IC del 95%
+* (cuando sqft=2300 y age=20)
+margins, dydx(sqft) at(sqft=2300 age=20)
 
-* (ii) Efecto marginal de AGE (cuando SQFT=2300 y AGE=20)
-margins, dydx(AGE) at(SQFT=2300 AGE=20)
+* (ii) Efecto marginal de age (cuando sqft=2300 y age=20)
+margins, dydx(age) at(sqft=2300 age=20)
 
-* (iv) Probar la hipótesis para el efecto marginal de AGE
-* (cuando SQFT=2300 y AGE=20)
-* H0: dPRICE/dAGE >= -1000 vs H1: dPRICE/dAGE < -1000
-* El efecto marginal es: B_AGE + 2*B_AGE2*20 + B_SQFT_AGE*2300
-testnl (_b[AGE] + 40 * _b[AGE2] + 2300 * _b[SQFT_AGE]) = -1000
+* (iv) Probar la hipótesis para el efecto marginal de age
+* (cuando sqft=2300 y age=20)
+* H0: dprice/dage >= -1000 vs H1: dprice/dage < -1000
+* El efecto marginal es: B_age + 2*B_age2*20 + B_sqft_age*2300
+testnl (_b[age] + 40 * _b[age2] + 2300 * _b[sqft_age]) = -1000
 * Interpreta el resultado para una prueba de una cola.
 
 *-------------------------------------------------------------------------------
@@ -124,25 +119,25 @@ testnl (_b[AGE] + 40 * _b[AGE2] + 2300 * _b[SQFT_AGE]) = -1000
 * insheet using br2.dat, clear names
 
 * Generar las nuevas variables necesarias
-generate SQFT100 = SQFT / 100
-generate lnPRICE = ln(PRICE)
-generate AGE2 = AGE^2
+generate sqft100 = sqft / 100
+generate lnprice = ln(price)
+generate age2 = age^2
 
 *-------------------------------------------------------------------------------
 * INCISO (a): Estimar la ecuación
 *-------------------------------------------------------------------------------
-regress lnPRICE SQFT100 AGE AGE2
+regress lnprice sqft100 age age2
 
 *-------------------------------------------------------------------------------
-* INCISO (c): Encontrar e interpretar estimaciones del efecto marginal sobre ln(PRICE)
+* INCISO (c): Encontrar e interpretar estimaciones del efecto marginal sobre ln(price)
 *-------------------------------------------------------------------------------
-* Para AGE = 5 y AGE = 20
-margins, dydx(AGE) at(AGE=(5 20))
+* Para age = 5 y age = 20
+margins, dydx(age) at(age=(5 20))
 
 *-------------------------------------------------------------------------------
-* INCISO (e): Estimar efectos marginales sobre PRICE para una casa específica
+* INCISO (e): Estimar efectos marginales sobre price para una casa específica
 *-------------------------------------------------------------------------------
-* Para AGE = 20 y SQFT = 2300 (es decir, SQFT100 = 23)
-* Usamos la opción 'expression' para obtener el efecto sobre el nivel de PRICE, no el logaritmo.
+* Para age = 20 y sqft = 2300 (es decir, sqft100 = 23)
+* Usamos la opción 'expression' para obtener el efecto sobre el nivel de price, no el logaritmo.
 margins, dydx(*) at(age=20 sqft100=23) expression(exp(predict()))
 
