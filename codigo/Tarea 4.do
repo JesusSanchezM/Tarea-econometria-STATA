@@ -254,5 +254,3 @@ display "--- RESULTADOS PREGUNTA (e) ---"
 display "Valores supuestos: Habitaciones=" scalar(BEDS_val) ", Baños=" scalar(BATHS_val)
 display "ln(price/1000) predicho: " scalar(lnprice_pred)
 display "Valor (PRICE) predicho en $: " scalar(price_pred)
-
-set more on
